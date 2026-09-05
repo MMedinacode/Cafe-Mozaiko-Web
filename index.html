@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Café Mozaiko — Barrio Brasil, Santiago</title>
+
+<!-- ============================================================
+     PROTOTIPO BETA — CAFÉ MOZAIKO
+     Datos verificados en Google Maps e Instagram (@cafemozaikooficial)
+     el 05-09-2026: dirección, horario, rating/opiniones, reseñas,
+     accesibilidad y servicios son reales.
+     PENDIENTE — nada de esto se inventó, falta que el cliente lo mande:
+     - Logo real (se usa un isotipo circular de reemplazo con las
+       iniciales, ver .logo-mark en styles.css)
+     - Fotos reales del local/productos (se usan fotos de stock de
+       Unsplash, marcadas en cada <img>, mientras llegan las reales)
+     - WhatsApp o teléfono: no hay ninguno registrado en Maps ni
+       Instagram — el único canal de contacto real es Instagram
+     - Carta con precios: no existe ninguna carta publicada con
+       precios (ni en Maps ni Instagram) — se muestran solo los
+       productos que la propia gente menciona en reseñas/Maps como
+       destacados, todos marcados "Consultar"
+     ============================================================ -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,700;1,600&family=Karla:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ======================= LOADER ======================= -->
+<div id="loader"><div class="loader-mark"></div></div>
+
+<!-- ======================= HEADER ======================= -->
+<header id="site-header">
+  <div class="nav-inner">
+    <button class="nav-brand" data-tab="inicio">
+      <span class="logo-mark"><span>café</span><span>mozaiko</span></span>
+      <strong>Mozaiko</strong>
+    </button>
+    <nav class="nav-links" id="main-nav">
+      <button class="nav-link active" data-tab="inicio">Inicio</button>
+      <button class="nav-link" data-tab="nosotros">Nosotros</button>
+      <button class="nav-link" data-tab="carta">Carta</button>
+      <button class="nav-link" data-tab="resenas">Reseñas</button>
+      <button class="nav-link" data-tab="visitanos">Visítanos</button>
+    </nav>
+    <div class="nav-actions">
+      <a class="cart-btn" href="https://instagram.com/cafemozaikooficial" target="_blank" rel="noopener">Escríbenos</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menú">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main-content">
+
+<!-- ======================= INICIO ======================= -->
+<section id="tab-inicio" class="tab-panel active" data-tab-panel="inicio">
+<section class="hero">
+  <div class="bg-photo">
+    <!-- FOTO DE STOCK (Unsplash) — reemplazar por foto real del local cuando el cliente la envíe -->
+    <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=1600&auto=format&fit=crop" alt="">
+  </div>
+  <span class="hero-mark logo-mark reveal"><span>café</span><span>mozaiko</span></span>
+  <span class="eyebrow reveal">Cafetería · Barrio Brasil, Santiago</span>
+  <h1 class="reveal">Un rincón tranquilo para conversar</h1>
+  <p class="tagline reveal">Buen café, deliciosos postres y muy buena selección de té, en un espacio pequeño, acogedor y con buena música — justo detrás de Plaza Brasil.</p>
+  <div class="hero-info reveal">
+    <div class="hero-pill"><span class="status-dot" id="statusDot"></span> <span id="statusText">Consultando horario…</span></div>
+    <div class="hero-pill">★ <strong>4.8</strong> (462 opiniones)</div>
+    <div class="hero-pill"><strong>Ricardo Cumming 380</strong>, Santiago Centro</div>
+  </div>
+  <div class="cta-row reveal">
+    <button class="btn btn-solid" data-tab="carta">Ver la carta</button>
+    <a class="btn btn-outline" href="https://instagram.com/cafemozaikooficial" target="_blank" rel="noopener">Síguenos en Instagram</a>
+  </div>
+</section>
+</section>
+
+<!-- ======================= NOSOTROS ======================= -->
+<section id="tab-nosotros" class="tab-panel" data-tab-panel="nosotros">
+<section>
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">lo que más destacan</span>
+      <h2>Tres cosas que nos definen</h2>
+    </div>
+    <div class="pilares-grid reveal">
+      <div class="pilar-card">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M4 8h13v5a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5V8Z"/><path d="M17 9h2a2 2 0 0 1 0 4h-2"/><path d="M6 3v2M10 3v2M14 3v2"/></svg>
+        <h3>Buen café</h3>
+        <p>Espresso, capuchino y chocolate caliente entre lo más pedido, según sus propios clientes.</p>
+      </div>
+      <div class="pilar-card">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M12 21s-7-4.5-9-9a5 5 0 0 1 9-3 5 5 0 0 1 9 3c-2 4.5-9 9-9 9z"/></svg>
+        <h3>Deliciosos postres</h3>
+        <p>Tortas caseras que varias reseñas destacan como uno de los puntos fuertes de la carta.</p>
+      </div>
+      <div class="pilar-card">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M4 21h16M6 21V9h9l3 3v9M9 9V5h3v4"/></svg>
+        <h3>Muy buena selección de té</h3>
+        <p>Un aspecto destacado real de su ficha de Google — variedad para quienes no toman café.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"><div class="tiles"><span></span><span></span><span></span></div></div>
+
+<section style="background:var(--ink); color:var(--paper);">
+  <div class="wrap">
+    <div class="section-head dark reveal">
+      <span class="eyebrow">para chusmear</span>
+      <h2>Nuestro espacio</h2>
+    </div>
+    <div class="gallery-grid reveal">
+      <!-- FOTOS DE STOCK (Unsplash): reemplazar todas por fotos reales del local en cuanto el cliente las envíe a fotos/ -->
+      <figure><img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?q=80&w=800&auto=format&fit=crop" alt="Barra de café"><div class="gallery-tag">La barra</div></figure>
+      <figure><img src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?q=80&w=800&auto=format&fit=crop" alt="Mesas del local"><div class="gallery-tag">Un rincón para quedarse</div></figure>
+      <figure><img src="https://images.unsplash.com/photo-1517686469429-8bdb88b9f907?q=80&w=800&auto=format&fit=crop" alt="Vitrina de tortas"><div class="gallery-tag">Vitrina de tortas</div></figure>
+      <figure><img src="https://images.unsplash.com/photo-1544787219-7f47ccb76574?q=80&w=800&auto=format&fit=crop" alt="Selección de té"><div class="gallery-tag">Selección de té</div></figure>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap sobre">
+    <span class="eyebrow reveal" style="color:var(--terracotta); font-family:'IBM Plex Mono',monospace; letter-spacing:0.16em; text-transform:uppercase; font-size:0.72rem;">quiénes somos</span>
+    <h2 class="reveal" style="margin-bottom:20px; font-style:italic;">Un café pequeño con mucho cariño detrás</h2>
+    <p class="reveal">Café Mozaiko es una cafetería de barrio en pleno Barrio Brasil, a pasos de Plaza Brasil. Sus propios clientes lo describen como un lugar discreto por fuera pero con una experiencia muy grata por dentro: espacio pequeño, ambiente tranquilo, buena música, y una atención que responde con cariño cada reseña. El espacio es accesible para personas en silla de ruedas.</p>
+    <div class="badges-row reveal" style="margin-top:28px;">
+      <span class="badge" style="background:rgba(194,84,47,0.08); border-color:rgba(194,84,47,0.3); color:var(--terracotta-dark);">Ambiente tranquilo</span>
+      <span class="badge" style="background:rgba(47,122,116,0.08); border-color:rgba(47,122,116,0.35); color:var(--teal-dark);">Accesible en silla de ruedas</span>
+      <span class="badge" style="background:rgba(209,161,60,0.1); border-color:rgba(209,161,60,0.4); color:#8a6a1f;">Para llevar y consumo en el lugar</span>
+      <span class="badge" style="background:rgba(194,84,47,0.08); border-color:rgba(194,84,47,0.3); color:var(--terracotta-dark);">Entrega a domicilio</span>
+    </div>
+  </div>
+</section>
+</section>
+
+<!-- ======================= CARTA ======================= -->
+<section id="tab-carta" class="tab-panel" data-tab-panel="carta">
+<section style="background:var(--cream-2);">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">la carta</span>
+      <h2>Café, té y algo dulce</h2>
+    </div>
+    <p class="menu-note reveal" style="margin-top:-24px; margin-bottom:40px;">Café Mozaiko todavía no publica una carta con precios en Maps ni Instagram — estos son los productos que sus propios clientes destacan en reseñas. Los precios se confirman directo en el local o por Instagram.</p>
+    <div class="menu-tabs reveal" id="menuTabs"></div>
+    <div id="menuPanels"></div>
+  </div>
+</section>
+</section>
+
+<!-- ======================= RESEÑAS ======================= -->
+<section id="tab-resenas" class="tab-panel" data-tab-panel="resenas">
+<section>
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">lo que dicen</span>
+      <h2>462 opiniones en Google</h2>
+    </div>
+
+    <div class="resena-resumen reveal">
+      <div class="stars">★★★★★</div>
+      <blockquote>"El café se ve muy discreto por afuera y estaba vacío, pero nos llevamos una muy grata experiencia, súper rica la torta y muy bien preparado los cafecitos, además de eso un ambiente muy tranquilo y con buena música."</blockquote>
+      <footer>— Clara Lobos Delgado, reseña en Google Maps</footer>
+    </div>
+
+    <div class="reveal" style="display:grid; grid-template-columns:repeat(3,1fr); gap:24px; margin-top:44px; text-align:left;">
+      <article class="review-card">
+        <div class="stars">★★★★★</div>
+        <p>"El café se ve muy discreto por afuera y estaba vacío, pero nos llevamos una muy grata experiencia, súper rica la torta y muy bien preparado los cafecitos. Sin duda volveremos para probar sus cositas saladas, tienen muchísimas cosas en su carta."</p>
+        <div class="review-meta">
+          <span class="review-avatar">CL</span>
+          <p>Clara Lobos Delgado<br/>hace 3 meses</p>
+        </div>
+      </article>
+      <article class="review-card">
+        <div class="stars">★★★★★</div>
+        <p>"Es un café muy agradable y tranquilo, callado. La atención excelente. El café que pedí, muy rico."</p>
+        <div class="review-meta">
+          <span class="review-avatar">LH</span>
+          <p>Loreto Hidalgo<br/>Local Guide · 295 opiniones · hace 1 mes</p>
+        </div>
+      </article>
+      <article class="review-card">
+        <div class="stars">★★★★★</div>
+        <p>"Visité el lugar porque había visto referencias positivas y efectivamente nos gustó mucho. La carta golosa, novedosa y variada. Nos atendieron súper bien, el espacio es pequeño pero muy agradable y bonito."</p>
+        <div class="review-meta">
+          <span class="review-avatar">CC</span>
+          <p>Carolina Cerda<br/>Local Guide · 39 opiniones · hace 1 año</p>
+        </div>
+      </article>
+    </div>
+
+    <div class="reveal" style="text-align:center; margin-top:44px;">
+      <a class="btn btn-solid" href="https://search.google.com/local/writereview?placeid=0x9662c5ad27c2fbed:0x30e8d524469180d" target="_blank" rel="noopener">Déjanos tu reseña en Google</a>
+    </div>
+  </div>
+</section>
+</section>
+
+<!-- ======================= VISÍTANOS ======================= -->
+<section id="tab-visitanos" class="tab-panel" data-tab-panel="visitanos">
+<section class="visit">
+  <div class="wrap visit-grid">
+    <div class="reveal">
+      <div class="section-head dark" style="text-align:left; margin-bottom:32px;">
+        <span class="eyebrow">te esperamos</span>
+        <h2>Visítanos</h2>
+      </div>
+      <div class="visit-block"><h3>Dirección</h3><p>Ricardo Cumming 380, esq. Compañía de Jesús, Santiago Centro (Barrio Brasil)</p></div>
+      <div class="visit-block">
+        <h3>Horario</h3>
+        <p id="visit-status" style="margin-bottom:6px;"></p>
+        <p>Lunes a viernes 7:30 a 21:30h<br>Sábado y domingo 9:00 a 21:00h</p>
+      </div>
+      <div class="visit-block"><h3>Accesibilidad</h3><p>Espacio accesible para personas en silla de ruedas. Estacionamiento no accesible.</p></div>
+
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px; margin:26px 0 12px;">
+        <a class="contact-box" href="https://instagram.com/cafemozaikooficial" target="_blank" rel="noopener">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.6" style="flex-shrink:0;"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1"/></svg>
+          <div><p class="cb-label">Instagram</p><p class="cb-value">@cafemozaikooficial</p></div>
+        </a>
+        <a class="contact-box" href="https://www.google.com/maps/dir/?api=1&destination=Cafe+Mozaiko&destination_place_id=0x9662c5ad27c2fbed:0x30e8d524469180d" target="_blank" rel="noopener">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.6" style="flex-shrink:0;"><path d="M12 22s7-7.2 7-12.5A7 7 0 0 0 5 9.5C5 14.8 12 22 12 22z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
+          <div><p class="cb-label">Google Maps</p><p class="cb-value">Cómo llegar</p></div>
+        </a>
+        <a class="contact-box" href="https://waze.com/ul?ll=-33.4405941,-70.6685646&navigate=yes" target="_blank" rel="noopener">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.6" style="flex-shrink:0;"><circle cx="12" cy="12" r="9"/><path d="M9 10c0-1 .8-2 2-2h1.5a2 2 0 1 1 0 4H11m0 0 3 3M8 15.5c.5.8 1.4 1.5 2.5 1.5"/><circle cx="9.3" cy="16.5" r=".6" fill="currentColor"/><circle cx="14.7" cy="16.5" r=".6" fill="currentColor"/></svg>
+          <div><p class="cb-label">Waze</p><p class="cb-value">Ir con Waze</p></div>
+        </a>
+      </div>
+      <!-- PLACEHOLDER: no hay WhatsApp ni teléfono registrado en Maps/Instagram — Instagram es el único
+           canal de contacto real confirmado. No inventar un número. -->
+    </div>
+    <div class="map-frame reveal">
+      <iframe loading="lazy" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3329.33437072372!2d-70.6685646!3d-33.4405941!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662c5ad27c2fbed%3A0x30e8d524469180d!2sCafe%20Mozaiko!5e0!3m2!1ses-419!2scl!4v1788639076660!5m2!1ses-419!2scl"></iframe>
+    </div>
+  </div>
+</section>
+</section>
+
+</main>
+
+<!-- ======================= FOOTER ======================= -->
+<footer class="site-footer">
+  <span class="logo-mark"><span>café</span><span>mozaiko</span></span>
+  <p style="margin-top:10px;">Cafetería de barrio · Barrio Brasil, Santiago &nbsp;·&nbsp;
+  <a href="https://instagram.com/cafemozaikooficial" target="_blank" rel="noopener">@cafemozaikooficial</a>
+  &nbsp;·&nbsp; Sitio demo diseñado con cariño</p>
+</footer>
+
+<!-- ======================= WIDGET FLOTANTE ======================= -->
+<a id="floatInstagram" href="https://instagram.com/cafemozaikooficial" target="_blank" rel="noopener" class="float-widget" aria-label="Instagram">
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.7"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1" fill="white" stroke="none"/></svg>
+</a>
+
+<script src="script.js"></script>
+</body>
+</html>
