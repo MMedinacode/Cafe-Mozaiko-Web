@@ -69,16 +69,16 @@ const MENU = [
     { n: 'Chocolate Caliente Prestigio', d: 'Mencionado por su nombre real en una reseña — "especial para una tarde fría", según quien lo pidió.', img: MENU_CHOCOLATE_SRC },
   ]},
   { cat: 'Té', items: [
-    { n: 'Selección de té', d: '"Muy buena selección de té" es un aspecto destacado real de su ficha de Google — variedad a confirmar en el local.' },
+    { n: 'Selección de té', d: 'Una de las cosas que más nos destacan: variedad para quienes no toman café.' },
   ]},
   { cat: 'Postres', items: [
-    { n: 'Torta del día', d: 'Las reseñas mencionan seguido lo rica que es la torta — variedad a confirmar en el local.' },
+    { n: 'Torta del día', d: 'Las reseñas mencionan seguido lo rica que es la torta.' },
     { n: 'Churros', d: 'Mencionados por su nombre real en una reseña, acompañando el chocolate caliente prestigio.' },
     { n: 'Helado', d: 'Otro de los productos "Popular" según su ficha de Google.' },
   ]},
   { cat: 'Salado', items: [
-    { n: 'Sándwich', d: 'Uno de los términos más mencionados en las reseñas (24 menciones) — variedad a confirmar en el local.', img: MENU_SANDWICH_SRC },
-    { n: 'Cositas saladas', d: 'Así las describen sus propios clientes — carta variada, a confirmar en el local.' },
+    { n: 'Sándwich', d: 'Uno de los términos más mencionados en nuestras reseñas.', img: MENU_SANDWICH_SRC },
+    { n: 'Cositas saladas', d: 'Así las describen nuestros clientes: carta variada.' },
   ]},
 ];
 
