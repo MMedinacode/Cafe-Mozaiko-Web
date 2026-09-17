@@ -64,7 +64,7 @@ window.addEventListener('load', () => {
 const MENU = [
   { cat: 'Café', items: [
     { n: 'Espresso', d: 'Uno de los cafés más pedidos según sus propios clientes.' },
-    { n: 'Espresso Doble', d: 'Destacado como "Popular" en la ficha de Google del local.' },
+    { n: 'Espresso Doble', d: 'De los más pedidos.' },
     { n: 'Capuchino', d: 'Mencionado seguido en las reseñas como muy rico.' },
     { n: 'Chocolate Caliente Prestigio', d: 'Mencionado por su nombre real en una reseña — "especial para una tarde fría", según quien lo pidió.', img: MENU_CHOCOLATE_SRC },
   ]},
@@ -74,7 +74,7 @@ const MENU = [
   { cat: 'Postres', items: [
     { n: 'Torta del día', d: 'Las reseñas mencionan seguido lo rica que es la torta.' },
     { n: 'Churros', d: 'Mencionados por su nombre real en una reseña, acompañando el chocolate caliente prestigio.' },
-    { n: 'Helado', d: 'Otro de los productos "Popular" según su ficha de Google.' },
+    { n: 'Helado', d: 'Otro de los más pedidos.' },
   ]},
   { cat: 'Salado', items: [
     { n: 'Sándwich', d: 'Uno de los términos más mencionados en nuestras reseñas.', img: MENU_SANDWICH_SRC },
